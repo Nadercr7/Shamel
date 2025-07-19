@@ -1,0 +1,8 @@
+{
+  "name": "Inclusive AI Learning Hub",
+  "description": "An accessible web application featuring a PDF summarizer, an interactive quiz game, and an AI-powered chatbot to assist with learning. The app is designed with accessibility in mind, offering high-contrast mode and font size adjustments.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}

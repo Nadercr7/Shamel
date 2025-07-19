@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inclusive AI Learning Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PDF.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.16.105/build/pdf.min.js"></script>
+    <script>
+      // Required for pdf.js to work
+      pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@2.16.105/build/pdf.worker.min.js`;
+    </script>
+    <script>
+      // Custom Tailwind config
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#7C3AED', // violet-600
+              'primary-light': '#A78BFA', // violet-400
+              'primary-dark': '#6D28D9', // violet-700
+              secondary: '#06B6D4', // Cyan-500
+              'base-100': '#FFFFFF', // White
+              'base-200': '#F1F5F9', // Slate-100
+              'base-300': '#E2E8F0', // Slate-200
+              'base-content': '#1E293B', // Slate-800
+              'high-contrast-bg': '#000000',
+              'high-contrast-text': '#FFFFFF',
+              'high-contrast-primary': '#FFFF00', // Yellow
+              'high-contrast-secondary': '#00FFFF', // Cyan
+            },
+            keyframes: {
+              'fade-in-up': {
+                  '0%': { opacity: '0', transform: 'translateY(10px)' },
+                  '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              glow: {
+                '0%, 100%': { 'box-shadow': '0 0 10px rgba(124, 58, 237, 0.7), 0 0 20px rgba(124, 58, 237, 0.5)' },
+                '50%': { 'box-shadow': '0 0 20px rgba(167, 139, 250, 0.9), 0 0 30px rgba(167, 139, 250, 0.7)' },
+              }
+            },
+            animation: {
+              'spin-slow': 'spin 3s linear infinite',
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+              'glow': 'glow 2.5s ease-in-out infinite',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      /* Basic accessibility style for high contrast mode */
+      html.high-contrast {
+        background-color: #000;
+        color: #fff;
+      }
+      /* Fallback for Inter font */
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.10.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
